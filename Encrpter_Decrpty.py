@@ -18,23 +18,23 @@ public_pem = public_key.export_key().decode()
 
 # print(type(private_pem), type(public_pem))
 
-with open('private.pem', 'w') as pr:
-	pr.write(private_pem)
-with open('public.pem', 'w') as pu:
-	pu.write(public_pem)
- 
- 
+with open("private.pem", "w") as pr:
+    pr.write(private_pem)
+with open("public.pem", "w") as pu:
+    pu.write(public_pem)
+
+
 # print('private.pem:')
 # with open('private.pem', 'r') as f:
 # 	print(f.read())
- 
+
 # print('public.pem:')
 # with open('public.pem', 'r') as f:
 #         print(f.read())
 
- 
-pr_key = RSA.import_key(open('private.pem', 'r').read())
-pu_key = RSA.import_key(open('public.pem', 'r').read())
+
+pr_key = RSA.import_key(open("private.pem", "r").read())
+pu_key = RSA.import_key(open("public.pem", "r").read())
 
 
 # print(type(pr_key), type(pu_key))
